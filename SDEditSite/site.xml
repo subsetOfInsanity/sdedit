@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <description name="sdedit plugin" url="http://sdedit.sourceforge.net/">
+      Auto-generate from debug sessions using the Quick Sequence Diagram Editor
+   </description>
+   <feature url="features/SDEditFeature_1.0.0.201009222323.jar" id="SDEditFeature" version="1.0.0.201009222323"/>
+</site>

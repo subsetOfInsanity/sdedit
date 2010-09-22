@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            name="SDEdit Commands"
+            id="sdedit.commands.category">
+      </category>
+      <command
+            name="Init SDEdit logging"
+            categoryId="sdedit.commands.category"
+            id="sdedit.commands.init">
+      </command>
+      <command
+            name="Launch SDEdit"
+            categoryId="sdedit.commands.category"
+            id="sdedit.commands.launch">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            commandId="sdedit.commands.init"
+            class="net.sf.sdedit.eclipse.InitHandler">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            commandId="sdedit.commands.launch"
+            class="net.sf.sdedit.eclipse.LaunchHandler">
+      </handler>
+   </extension>
+<!--   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="sdedit.commands.init"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+6"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+   </extension> -->
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu?after=additions">
+         <menu
+               label="SDEdit"
+               mnemonic="S"
+               id="sdedit.menus.mainMenu">
+            <command
+                  commandId="sdedit.commands.init"
+                  mnemonic="I"
+                  id="sdedit.menus.init">
+            </command>
+            <command
+                  commandId="sdedit.commands.launch"
+                  mnemonic="L"
+                  id="sdedit.menus.launch">
+            </command>
+         </menu>
+      </menuContribution>
+      <menuContribution
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <toolbar
+               id="sdedit.toolbars.sampleToolbar">
+            <command
+                  commandId="sdedit.commands.init"
+                  icon="icons/sample.gif"
+                  tooltip="Init SDEdit Logging"
+                  id="sdedit.toolbars.init">
+            </command>
+            <command
+                  commandId="sdedit.commands.launch"
+                  icon="icons/sample.gif"
+                  tooltip="Launch SDEdit"
+                  id="sdedit.toolbars.launch">
+            </command>
+         </toolbar>
+      </menuContribution>
+   </extension>   
+</plugin>

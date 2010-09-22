@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: SDEditPlugin
+Bundle-SymbolicName: SDEditPlugin; singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: net.sf.sdedit.eclipse.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.debug.core,
+ org.eclipse.ui.console,
+ org.eclipse.jdt.debug
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ClassPath: lib/sdedit-3.1.jar,
+ .
